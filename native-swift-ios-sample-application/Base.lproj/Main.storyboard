@@ -1,0 +1,1617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OTE-0Z-HXz">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainStartViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b3h-Oc-dSp"/>
+                    <connections>
+                        <segue destination="3Qx-ye-RMb" kind="show" identifier="segueManualInstrument" id="prz-Af-si6"/>
+                        <segue destination="ll7-Ct-WyO" kind="show" identifier="segueAutoInstrument" id="drP-vm-wFN"/>
+                        <segue destination="XGN-Ws-YLQ" kind="show" identifier="segueConfigurationAgent" id="4mS-Ls-sHj"/>
+                        <segue destination="3C0-DA-u8d" kind="show" identifier="segueDocumentation" id="eeA-Jv-qnS"/>
+                        <segue destination="ZPf-5X-aIo" kind="show" identifier="segueAdvancedConfiguration" id="Qnt-cJ-4L0"/>
+                        <segue destination="2QH-hr-9Fq" kind="show" identifier="segueSessionReplay" id="klk-15-xtI"/>
+                        <segue destination="xaY-Sj-2bX" kind="show" identifier="segueCurrentConfiguration" id="cAk-mi-RpI"/>
+                        <segue destination="43v-fu-ofT" kind="show" identifier="segueSwiftUI" id="JD7-bu-7YM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="-261"/>
+        </scene>
+        <!--Configuration Agent View Controller-->
+        <scene sceneID="eOw-3B-HNj">
+            <objects>
+                <viewController id="XGN-Ws-YLQ" customClass="ConfigurationAgentViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3c-ep-LOa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNq-TD-Uii">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lms-E5-k3m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZNq-TD-Uii" firstAttribute="leading" secondItem="lms-E5-k3m" secondAttribute="leading" id="HWq-6g-uur"/>
+                            <constraint firstItem="lms-E5-k3m" firstAttribute="bottom" secondItem="ZNq-TD-Uii" secondAttribute="bottom" id="JeK-V1-XHa"/>
+                            <constraint firstItem="ZNq-TD-Uii" firstAttribute="top" secondItem="lms-E5-k3m" secondAttribute="top" id="OtA-2c-KQp"/>
+                            <constraint firstItem="lms-E5-k3m" firstAttribute="trailing" secondItem="ZNq-TD-Uii" secondAttribute="trailing" id="vGH-TR-HlT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HOl-DB-agK"/>
+                    <connections>
+                        <outlet property="webView" destination="ZNq-TD-Uii" id="fKW-6b-8hy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6om-n1-znU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3065" y="-884"/>
+        </scene>
+        <!--Help Dynatrace View Controller-->
+        <scene sceneID="u8k-US-Pux">
+            <objects>
+                <viewController id="3C0-DA-u8d" customClass="HelpDynatraceViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9ev-H2-tqM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="za8-QT-3gp">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gLa-Hv-lP5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="za8-QT-3gp" firstAttribute="top" secondItem="gLa-Hv-lP5" secondAttribute="top" id="30Q-3x-nOd"/>
+                            <constraint firstItem="gLa-Hv-lP5" firstAttribute="trailing" secondItem="za8-QT-3gp" secondAttribute="trailing" id="8wW-Qz-haE"/>
+                            <constraint firstItem="za8-QT-3gp" firstAttribute="leading" secondItem="gLa-Hv-lP5" secondAttribute="leading" id="WTD-ak-oaM"/>
+                            <constraint firstItem="gLa-Hv-lP5" firstAttribute="bottom" secondItem="za8-QT-3gp" secondAttribute="bottom" id="itR-fY-sXn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cw6-MF-20b"/>
+                    <connections>
+                        <outlet property="webView" destination="za8-QT-3gp" id="ntx-s4-u3N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jcR-i2-gkS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3065" y="245"/>
+        </scene>
+        <!--Configuration View Controller-->
+        <scene sceneID="bk0-V5-vmH">
+            <objects>
+                <viewController id="xaY-Sj-2bX" customClass="ConfigurationViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="quz-jP-Hlh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ra2-AK-wxk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3DH-8h-5WH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQo-AC-zPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3772" y="-261"/>
+        </scene>
+        <!--Manuel Instrument Menu View Controller-->
+        <scene sceneID="P8g-61-mxk">
+            <objects>
+                <viewController id="3Qx-ye-RMb" customClass="ManuelInstrumentMenuViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uar-pc-SEc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Pzi-TJ-v0E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ESc-Kt-5Oy"/>
+                    <connections>
+                        <segue destination="Lra-JE-6KU" kind="show" identifier="segueManualActions" id="f1R-V3-QCD"/>
+                        <segue destination="F4X-aF-Yuj" kind="show" identifier="segueManualCustomActions" id="nIN-9e-moM"/>
+                        <segue destination="4R2-Sx-6ZZ" kind="show" identifier="segueManualReportActionErrors" id="oAP-Fu-3qI"/>
+                        <segue destination="1gJ-8d-OmQ" kind="show" identifier="segueManualGlobalErrors" id="5bU-59-o0e"/>
+                        <segue destination="qwY-3F-bvH" kind="show" identifier="segueManualWebRequests" id="DwT-0f-sfm"/>
+                        <segue destination="HaJ-km-Vdk" kind="show" identifier="segueManualIdentifyUser" id="zWN-TS-EyC"/>
+                        <segue destination="tay-oc-pwv" kind="show" identifier="segueManualReportValues" id="7aP-6a-Ilh"/>
+                        <segue destination="WXg-kP-vic" kind="show" identifier="segueManualBizEvents" id="aFs-SD-GxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9PB-fs-f1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="1396"/>
+        </scene>
+        <!--Manual Button Action View Controller-->
+        <scene sceneID="JhT-wS-bym">
+            <objects>
+                <viewController id="Lra-JE-6KU" customClass="ManualButtonActionViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hD-oP-2Nb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FvH-g4-yaa">
+                                <rect key="frame" x="16" y="460" width="361" height="338"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Use the OneAgent SDK for iOS to report additional details about the user sessions in your mobile app. The OneAgent SDK for iOS allows you to create custom actions, measure web requests, report errors, and tag specific users. The sections below explain how to enable these capabilities.
+
+For iOS, the OneAgent SDK is available automatically once you add the Dynatrace CocoaPod to your project. You can use the OneAgent SDK for iOS in Swift and Objective-C.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yxi-68-xf9">
+                                <rect key="frame" x="12" y="114.99999999999999" width="369" height="34.333333333333329"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJ0-sN-79Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Simple Action"/>
+                                        <connections>
+                                            <action selector="btnSimple_Touch:" destination="Lra-JE-6KU" eventType="touchUpInside" id="siR-Jl-9bR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EG9-Xu-h2r">
+                                        <rect key="frame" x="188.66666666666663" y="0.0" width="180.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Cancel Action"/>
+                                        <connections>
+                                            <action selector="btnCancel_Touch:" destination="Lra-JE-6KU" eventType="touchUpInside" id="TYz-XN-ZrY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rs-Md-XME">
+                                <rect key="frame" x="12" y="161.33333333333334" width="369" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Parant - Child Action"/>
+                                <connections>
+                                    <action selector="btnParantChild_Touch:" destination="Lra-JE-6KU" eventType="touchUpInside" id="Zxi-JZ-ZYc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1un-va-EFR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Rs-Md-XME" firstAttribute="leading" secondItem="1un-va-EFR" secondAttribute="leading" constant="12" id="21I-dZ-U3i"/>
+                            <constraint firstItem="Yxi-68-xf9" firstAttribute="top" secondItem="1un-va-EFR" secondAttribute="top" constant="12" id="Ck5-G5-nBe"/>
+                            <constraint firstItem="Yxi-68-xf9" firstAttribute="leading" secondItem="1un-va-EFR" secondAttribute="leading" constant="12" id="Gub-Im-G0G"/>
+                            <constraint firstItem="4Rs-Md-XME" firstAttribute="top" secondItem="Yxi-68-xf9" secondAttribute="bottom" constant="12" id="ePB-Oz-AhB"/>
+                            <constraint firstItem="1un-va-EFR" firstAttribute="trailing" secondItem="Yxi-68-xf9" secondAttribute="trailing" constant="12" id="s1f-xD-k51"/>
+                            <constraint firstItem="1un-va-EFR" firstAttribute="trailing" secondItem="4Rs-Md-XME" secondAttribute="trailing" constant="12" id="yTt-tH-ULZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ypJ-nl-0FA"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="FvH-g4-yaa" id="ptx-tG-NmE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXN-IU-tPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2241.9847328244273" y="886.61971830985919"/>
+        </scene>
+        <!--Auto Instrument Menu View Controller-->
+        <scene sceneID="qvS-L5-Xsw">
+            <objects>
+                <viewController id="ll7-Ct-WyO" customClass="AutoInstrumentMenuViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gdq-Z1-G7T">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sdv-Nm-wOg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="era-hV-auz"/>
+                    <connections>
+                        <segue destination="ccA-NU-3O8" kind="show" identifier="segueAutoActions" id="O2o-Wk-Rfo"/>
+                        <segue destination="SHb-ok-lb3" kind="show" identifier="segueAutoCustomActions" id="Y6y-Pv-rWb"/>
+                        <segue destination="uDc-io-2CN" kind="show" identifier="segueAutoWebRequests" id="q7e-23-Qgl"/>
+                        <segue destination="YaM-BF-fBi" kind="show" identifier="segueAutoGlobalErrors" id="jr4-cn-zhu"/>
+                        <segue destination="2Rd-Fy-sTb" kind="show" identifier="segueAutoIdentifyUser" id="ieZ-ys-zcu"/>
+                        <segue destination="hiJ-A5-vBK" kind="show" identifier="segueAutoReportActionErrors" id="vof-hj-94j"/>
+                        <segue destination="eCL-KI-Bu1" kind="show" identifier="segueAutoReportValues" id="J11-Na-dAv"/>
+                        <segue destination="CDl-3h-ctB" kind="show" identifier="segueAutoBizEvents" id="x4g-q8-IcU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vY-df-Vs6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="-2016"/>
+        </scene>
+        <!--Auto Button Action View Controller-->
+        <scene sceneID="yZk-MD-0an">
+            <objects>
+                <viewController id="ccA-NU-3O8" customClass="AutoButtonActionViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dA4-XQ-d7M">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="y2w-gv-Azg">
+                                <rect key="frame" x="9" y="103" width="375" height="356"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSC-AV-ujq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="61.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Title"/>
+                                        <connections>
+                                            <action selector="btnTitle_Touch:" destination="ccA-NU-3O8" eventType="touchUpInside" id="9cX-sA-syx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-og-rIB">
+                                        <rect key="frame" x="0.0" y="73.666666666666657" width="375" height="61.666666666666657"/>
+                                        <accessibility key="accessibilityConfiguration" label="Accessibility Label"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray"/>
+                                        <connections>
+                                            <action selector="btnAccessibilityLabel_Touch:" destination="ccA-NU-3O8" eventType="touchUpInside" id="UUV-lr-3hu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwo-ic-Zg2">
+                                        <rect key="frame" x="0.0" y="147.33333333333334" width="375" height="61.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray"/>
+                                        <connections>
+                                            <action selector="btnNothing_Touch:" destination="ccA-NU-3O8" eventType="touchUpInside" id="tc4-ga-dPG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgA-Sb-Q6E">
+                                        <rect key="frame" x="0.0" y="220.66666666666669" width="375" height="61.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Modify Action"/>
+                                        <connections>
+                                            <action selector="btnModifyAction_Touch:" destination="ccA-NU-3O8" eventType="touchUpInside" id="bfZ-hE-8uk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaY-bw-cot">
+                                        <rect key="frame" x="0.0" y="294.33333333333331" width="375" height="61.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Masking Actions"/>
+                                        <connections>
+                                            <action selector="btnMaskAction_Touch:" destination="ccA-NU-3O8" eventType="touchUpInside" id="SEd-YB-keI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="356" id="gNh-8O-Ef7"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s5Z-d4-JHP">
+                                <rect key="frame" x="9" y="471" width="375" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">To construct user action names, OneAgent captures the control title from UIButton by evaluating the following order of APIs or fields and stopping once it receives a valid text:
+
+titleLabel.attributedText
+attributedTitleForState:UIControlStateNormal
+accessibilityLabel
+If none of these produce usable text, OneAgent sets the control title to the default Button value.
+
+For cells, the behavior is similar: a heuristic is used to determine the most prominent label in the cell, and OneAgent uses that text in a user action name.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tE9-ZV-3x8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y2w-gv-Azg" firstAttribute="leading" secondItem="tE9-ZV-3x8" secondAttribute="leading" constant="9" id="Rtp-qD-0sm"/>
+                            <constraint firstItem="tE9-ZV-3x8" firstAttribute="trailing" secondItem="s5Z-d4-JHP" secondAttribute="trailing" constant="9" id="Uwl-kF-aad"/>
+                            <constraint firstItem="s5Z-d4-JHP" firstAttribute="leading" secondItem="tE9-ZV-3x8" secondAttribute="leading" constant="9" id="i6O-Lc-OgN"/>
+                            <constraint firstItem="tE9-ZV-3x8" firstAttribute="trailing" secondItem="y2w-gv-Azg" secondAttribute="trailing" constant="9" id="pcb-be-oqg"/>
+                            <constraint firstItem="y2w-gv-Azg" firstAttribute="top" secondItem="tE9-ZV-3x8" secondAttribute="top" id="qny-vX-S3m"/>
+                            <constraint firstItem="s5Z-d4-JHP" firstAttribute="top" secondItem="y2w-gv-Azg" secondAttribute="bottom" constant="12" id="qtU-VY-NiB"/>
+                            <constraint firstItem="tE9-ZV-3x8" firstAttribute="bottom" secondItem="s5Z-d4-JHP" secondAttribute="bottom" constant="9" id="tPq-bh-5QD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fMY-Hm-PSW"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="s5Z-d4-JHP" id="dom-la-hG2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XsJ-19-ZYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2241.9847328244273" y="-2525.3521126760565"/>
+        </scene>
+        <!--Seassion Replay Features View Controller-->
+        <scene sceneID="qZA-ls-23O">
+            <objects>
+                <viewController id="2QH-hr-9Fq" customClass="SeassionReplayFeaturesViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P6h-az-VM5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kgb-qs-rcX">
+                                <rect key="frame" x="9" y="480" width="375" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="flm-Wd-Aco"/>
+                                </constraints>
+                                <string key="text">https://www.dynatrace.com/support/help/shortlink/enable-session-replay-on-crashes
+
+https://www.dynatrace.com/support/help/shortlink/enable-session-replay-on-crashes#screenshot-debugger
+
+https://www.dynatrace.com/support/help/shortlink/enable-session-replay-on-crashes#frequently-asked-questions</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="h7n-sF-ReS">
+                                <rect key="frame" x="9" y="115.00000000000001" width="375" height="173.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zP-hD-1xf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Masking "/>
+                                        <connections>
+                                            <action selector="btnMasking_Touch:" destination="2QH-hr-9Fq" eventType="touchUpInside" id="Ufw-Sk-B5Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpS-1a-2Rq">
+                                        <rect key="frame" x="0.0" y="46.333333333333343" width="375" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Change Masking Level"/>
+                                        <connections>
+                                            <action selector="btnChangeMaskingLevel_Touch:" destination="2QH-hr-9Fq" eventType="touchUpInside" id="Dmd-4P-vtz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj6-wF-tBO">
+                                        <rect key="frame" x="0.0" y="92.666666666666657" width="375" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Customize Masking"/>
+                                        <connections>
+                                            <action selector="btnCustomizeMasking_Touch:" destination="2QH-hr-9Fq" eventType="touchUpInside" id="9gK-Wz-aUo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pix-zG-ss5">
+                                        <rect key="frame" x="0.0" y="139" width="375" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Transmission Mode"/>
+                                        <connections>
+                                            <action selector="btnTransmissionMode_Touch:" destination="2QH-hr-9Fq" eventType="touchUpInside" id="DhA-e9-vEg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i4g-Ux-mPT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h7n-sF-ReS" firstAttribute="leading" secondItem="i4g-Ux-mPT" secondAttribute="leading" constant="9" id="79f-MB-Zlj"/>
+                            <constraint firstItem="kgb-qs-rcX" firstAttribute="bottom" secondItem="i4g-Ux-mPT" secondAttribute="bottom" id="HXe-0u-7Uz"/>
+                            <constraint firstItem="h7n-sF-ReS" firstAttribute="top" secondItem="i4g-Ux-mPT" secondAttribute="top" constant="12" id="OEx-nv-Knu"/>
+                            <constraint firstItem="kgb-qs-rcX" firstAttribute="leading" secondItem="i4g-Ux-mPT" secondAttribute="leading" constant="9" id="caR-z4-Ykk"/>
+                            <constraint firstItem="i4g-Ux-mPT" firstAttribute="trailing" secondItem="h7n-sF-ReS" secondAttribute="trailing" constant="9" id="e8Q-AZ-b6f"/>
+                            <constraint firstItem="i4g-Ux-mPT" firstAttribute="trailing" secondItem="kgb-qs-rcX" secondAttribute="trailing" constant="9" id="p5W-MB-rpd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9VV-cN-aQE"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="kgb-qs-rcX" id="tIh-WJ-oXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwH-Ra-NZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1909.1603053435115" y="-1411.267605633803"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="voU-0e-ceq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OTE-0Z-HXz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mHo-PG-akP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SFZ-Oj-1tZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YO0-ig-Apz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1108" y="-261"/>
+        </scene>
+        <!--Auto Other Actions View Controller-->
+        <scene sceneID="4tz-TZ-xCG">
+            <objects>
+                <viewController id="SHb-ok-lb3" customClass="AutoOtherActionsViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BXG-Pk-uOi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="3FD-zo-evC">
+                                <rect key="frame" x="9" y="115" width="375" height="31"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lcX-gX-90h">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmantChange:" destination="SHb-ok-lb3" eventType="valueChanged" id="qh6-iG-wIT"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bn-19-73E">
+                                        <rect key="frame" x="58" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchChanged:" destination="SHb-ok-lb3" eventType="valueChanged" id="Muz-a4-POE"/>
+                                        </connections>
+                                    </switch>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1ii-wz-e82">
+                                        <rect key="frame" x="127" y="0.0" width="250" height="32"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="SHb-ok-lb3" eventType="valueChanged" id="csH-x5-aDd"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="EPL-hg-ayc"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0le-YC-Y20">
+                                <rect key="frame" x="16" y="467" width="361" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="GUu-pf-N54"/>
+                                </constraints>
+                                <string key="text">You can define and report custom actions. After you start them, enhance them with additional information before finally closing them.
+
+If you need to change an autogenerated user action, see Modify and cancel autogenerated actions.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbe-ie-Wgi">
+                                <rect key="frame" x="9" y="226" width="375" height="209"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swip Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G01-og-ZlR">
+                                        <rect key="frame" x="166" y="94" width="75" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                            </view>
+                            <colorWell contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Change Collor well" translatesAutoresizingMaskIntoConstraints="NO" id="Wzh-KF-7cL">
+                                <rect key="frame" x="50" y="166" width="28" height="28"/>
+                            </colorWell>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D6I-ax-974"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wzh-KF-7cL" firstAttribute="top" secondItem="3FD-zo-evC" secondAttribute="bottom" constant="20" id="2lC-yB-ymO"/>
+                            <constraint firstItem="tbe-ie-Wgi" firstAttribute="top" secondItem="Wzh-KF-7cL" secondAttribute="bottom" constant="32" id="4Jf-Rd-AiI"/>
+                            <constraint firstItem="tbe-ie-Wgi" firstAttribute="top" secondItem="Wzh-KF-7cL" secondAttribute="bottom" constant="32" id="6FS-iu-HcU"/>
+                            <constraint firstItem="0le-YC-Y20" firstAttribute="leading" secondItem="BXG-Pk-uOi" secondAttribute="leadingMargin" id="Bcy-jo-G59"/>
+                            <constraint firstItem="D6I-ax-974" firstAttribute="trailing" secondItem="tbe-ie-Wgi" secondAttribute="trailing" constant="9" id="HiQ-wM-w7a"/>
+                            <constraint firstItem="0le-YC-Y20" firstAttribute="centerX" secondItem="tbe-ie-Wgi" secondAttribute="centerX" id="Jk0-HY-aJ1"/>
+                            <constraint firstItem="3FD-zo-evC" firstAttribute="top" secondItem="D6I-ax-974" secondAttribute="top" constant="12" id="Np8-9g-n3Q"/>
+                            <constraint firstItem="3FD-zo-evC" firstAttribute="leading" secondItem="D6I-ax-974" secondAttribute="leading" constant="9" id="PyI-1N-ezm"/>
+                            <constraint firstItem="D6I-ax-974" firstAttribute="trailing" secondItem="tbe-ie-Wgi" secondAttribute="trailing" constant="9" id="S4i-QI-ius"/>
+                            <constraint firstItem="tbe-ie-Wgi" firstAttribute="leading" secondItem="D6I-ax-974" secondAttribute="leading" constant="9" id="U2a-eh-ws3"/>
+                            <constraint firstItem="0le-YC-Y20" firstAttribute="top" secondItem="tbe-ie-Wgi" secondAttribute="bottom" constant="32" id="UgD-a9-pD9"/>
+                            <constraint firstItem="0le-YC-Y20" firstAttribute="top" secondItem="tbe-ie-Wgi" secondAttribute="bottom" constant="32" id="WaX-Or-aL7"/>
+                            <constraint firstItem="D6I-ax-974" firstAttribute="bottom" secondItem="0le-YC-Y20" secondAttribute="bottom" constant="13" id="XQJ-u7-nxY"/>
+                            <constraint firstItem="D6I-ax-974" firstAttribute="trailing" secondItem="3FD-zo-evC" secondAttribute="trailing" constant="9" id="ZeT-4e-QyD"/>
+                            <constraint firstItem="tbe-ie-Wgi" firstAttribute="leading" secondItem="D6I-ax-974" secondAttribute="leading" constant="9" id="cC6-bA-StW"/>
+                            <constraint firstItem="Wzh-KF-7cL" firstAttribute="leading" secondItem="D6I-ax-974" secondAttribute="leading" constant="50" id="gmd-de-1BC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mDd-en-y5d"/>
+                    <connections>
+                        <outlet property="colorWell" destination="Wzh-KF-7cL" id="7tm-qa-Hl1"/>
+                        <outlet property="swipableView" destination="tbe-ie-Wgi" id="Jqn-k7-ikH"/>
+                        <outlet property="txtInformation" destination="0le-YC-Y20" id="GYC-B8-FlB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYg-YR-35X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3310.6870229007632" y="-2525.3521126760565"/>
+        </scene>
+        <!--Auto Identify User View Controller-->
+        <scene sceneID="Rtq-A3-5np">
+            <objects>
+                <viewController id="2Rd-Fy-sTb" customClass="AutoIdentifyUserViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iOM-dX-zeO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ewd-3l-DIK">
+                                <rect key="frame" x="9" y="115" width="375" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DOe-mX-NZq">
+                                <rect key="frame" x="9" y="492" width="375" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="TlW-GK-xsQ"/>
+                                </constraints>
+                                <string key="text">You can tag each user of your mobile apps with a unique user name. This enables you to search and filter specific user sessions and analyze individual user behavior over time.
+
+The following steps explain how to manually tag an individual user via the Dynatrace API. You can tag users when they log in or when an already logged in session is used or restored upon app relaunch, as the tag isn't persisted over app restarts.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jge-Ne-kz7">
+                                <rect key="frame" x="265" y="161" width="119" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Identify user"/>
+                                <connections>
+                                    <action selector="btnIdentifyUser_Touch:" destination="2Rd-Fy-sTb" eventType="touchUpInside" id="GLM-Uf-iua"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JIa-Ur-t7X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="AutoIdentifyUser"/>
+                        <constraints>
+                            <constraint firstItem="JIa-Ur-t7X" firstAttribute="trailing" secondItem="DOe-mX-NZq" secondAttribute="trailing" constant="9" id="0FY-NE-Oin"/>
+                            <constraint firstItem="DOe-mX-NZq" firstAttribute="leading" secondItem="JIa-Ur-t7X" secondAttribute="leading" constant="9" id="ArM-vi-lt9"/>
+                            <constraint firstItem="Ewd-3l-DIK" firstAttribute="top" secondItem="JIa-Ur-t7X" secondAttribute="top" constant="12" id="FMX-qn-xMz"/>
+                            <constraint firstItem="JIa-Ur-t7X" firstAttribute="trailing" secondItem="jge-Ne-kz7" secondAttribute="trailing" constant="9" id="Q0D-2f-VTP"/>
+                            <constraint firstItem="JIa-Ur-t7X" firstAttribute="trailing" secondItem="Ewd-3l-DIK" secondAttribute="trailing" constant="9" id="QBh-Js-CY2"/>
+                            <constraint firstItem="Ewd-3l-DIK" firstAttribute="leading" secondItem="JIa-Ur-t7X" secondAttribute="leading" constant="9" id="Rf3-bc-gv7"/>
+                            <constraint firstItem="jge-Ne-kz7" firstAttribute="top" secondItem="Ewd-3l-DIK" secondAttribute="bottom" constant="12" id="Y60-3t-vpO"/>
+                            <constraint firstItem="DOe-mX-NZq" firstAttribute="bottom" secondItem="JIa-Ur-t7X" secondAttribute="bottom" constant="12" id="bxJ-UF-Xid"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3hS-xV-3mz"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="DOe-mX-NZq" id="hKe-4I-OEl"/>
+                        <outlet property="txtUserName" destination="Ewd-3l-DIK" id="pKT-4w-Cib"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uf-UP-yUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3310.6870229007632" y="-1533.0985915492959"/>
+        </scene>
+        <!--Auto Web Requests View Controller-->
+        <scene sceneID="pin-S1-Kz1">
+            <objects>
+                <viewController id="uDc-io-2CN" customClass="AutoWebRequestsViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ufk-9F-cKB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://myapi/getsomething/123" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OAu-hg-MLm">
+                                <rect key="frame" x="9" y="115" width="375" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="url"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g2-0v-Pkn">
+                                <rect key="frame" x="9" y="208" width="375" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Manual instrumented web request"/>
+                                <connections>
+                                    <action selector="btnManualInstrumentWebRequest_Touch:" destination="uDc-io-2CN" eventType="touchUpInside" id="Naa-zl-GdE"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-T4-lCC">
+                                <rect key="frame" x="9" y="468" width="375" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="x1W-oo-57C"/>
+                                </constraints>
+                                <string key="text">You can tag each user of your mobile apps with a unique user name. This enables you to search and filter specific user sessions and analyze individual user behavior over time.
+
+The following steps explain how to manually tag an individual user via the Dynatrace API. You can tag users when they log in or when an already logged in session is used or restored upon app relaunch, as the tag isn't persisted over app restarts.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akb-7J-fV2">
+                                <rect key="frame" x="9" y="161" width="375" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Auto instrumented web request"/>
+                                <connections>
+                                    <action selector="btnAutoInstrumentWebRequest_Touch:" destination="uDc-io-2CN" eventType="touchUpInside" id="sCh-r8-Rqg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKE-Qx-ACT">
+                                <rect key="frame" x="9" y="251" width="375" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Stand-Alone webrequest"/>
+                                <connections>
+                                    <action selector="btnAutoInstrumentStandAloneWebRequest_Touch:" destination="uDc-io-2CN" eventType="touchUpInside" id="rJe-Bg-n0h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iMC-Eu-k4t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iMC-Eu-k4t" firstAttribute="trailing" secondItem="9g2-0v-Pkn" secondAttribute="trailing" constant="9" id="0OY-gb-9vS"/>
+                            <constraint firstItem="iMC-Eu-k4t" firstAttribute="trailing" secondItem="OAu-hg-MLm" secondAttribute="trailing" constant="9" id="1jp-h4-PoH"/>
+                            <constraint firstItem="iMC-Eu-k4t" firstAttribute="trailing" secondItem="Akb-7J-fV2" secondAttribute="trailing" constant="9" id="1lA-lY-Wtn"/>
+                            <constraint firstItem="9g2-0v-Pkn" firstAttribute="top" secondItem="Akb-7J-fV2" secondAttribute="bottom" constant="12" id="45H-gE-TsY"/>
+                            <constraint firstItem="iMC-Eu-k4t" firstAttribute="trailing" secondItem="Ziq-T4-lCC" secondAttribute="trailing" constant="9" id="BqE-IH-vnt"/>
+                            <constraint firstItem="iMC-Eu-k4t" firstAttribute="bottom" secondItem="Ziq-T4-lCC" secondAttribute="bottom" constant="12" id="IJX-bM-5Ly"/>
+                            <constraint firstItem="Ziq-T4-lCC" firstAttribute="leading" secondItem="iMC-Eu-k4t" secondAttribute="leading" constant="9" id="K0K-Rz-1yD"/>
+                            <constraint firstItem="9g2-0v-Pkn" firstAttribute="leading" secondItem="iMC-Eu-k4t" secondAttribute="leading" constant="9" id="PAb-SU-EJt"/>
+                            <constraint firstItem="OAu-hg-MLm" firstAttribute="leading" secondItem="iMC-Eu-k4t" secondAttribute="leading" constant="9" id="Ue2-qf-vvS"/>
+                            <constraint firstItem="OAu-hg-MLm" firstAttribute="top" secondItem="iMC-Eu-k4t" secondAttribute="top" constant="12" id="fYB-hd-SpR"/>
+                            <constraint firstItem="Akb-7J-fV2" firstAttribute="top" secondItem="OAu-hg-MLm" secondAttribute="bottom" constant="12" id="ldp-c4-NE8"/>
+                            <constraint firstItem="Akb-7J-fV2" firstAttribute="leading" secondItem="iMC-Eu-k4t" secondAttribute="leading" constant="9" id="zBg-0D-ujX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PQA-IE-580"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="Ziq-T4-lCC" id="Vic-jJ-iff"/>
+                        <outlet property="txtUrlRequest" destination="OAu-hg-MLm" id="4Ta-wI-u5l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pad-if-H9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4359.5419847328239" y="-2525.3521126760565"/>
+        </scene>
+        <!--Auto Report Errors View Controller-->
+        <scene sceneID="Xfp-tD-NsD">
+            <objects>
+                <viewController id="hiJ-A5-vBK" customClass="AutoReportErrorsViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OdQ-Ra-uN3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yYC-iC-rvT">
+                                <rect key="frame" x="9" y="468" width="375" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="OIt-5D-Fwl"/>
+                                </constraints>
+                                <string key="text">Error bound to a specific user action https://www.dynatrace.com/support/help/shortlink/ios-oneagent-sdk#report-error
+
+With reportError, you can report a specific event as an error event.
+
+There are two options for reporting an error event:
+
+Report it as part of an action (either a custom action or an autogenerated user action)
+Report it as a standalone error, which is generated as a global event that is not tied to a specific action
+Reported errors (both standalone and "attached" to a user action) are displayed on the user session details page and multidimensional User action analysis page. Reported errors that are part of a user action are also displayed in the user action waterfall analysis.
+
+You can report an error with an error code, an exception, or an NSError. </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My custom error" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLd-vr-WUF">
+                                <rect key="frame" x="9" y="115" width="375" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB6-2L-xzb">
+                                <rect key="frame" x="178" y="161" width="206" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Report user action Error"/>
+                                <connections>
+                                    <action selector="btnGlobalError_Touch:" destination="hiJ-A5-vBK" eventType="touchUpInside" id="fi0-2O-XQh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pXK-gx-lbo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OLd-vr-WUF" firstAttribute="top" secondItem="pXK-gx-lbo" secondAttribute="top" constant="12" id="2Y1-nf-bCQ"/>
+                            <constraint firstItem="pXK-gx-lbo" firstAttribute="bottom" secondItem="yYC-iC-rvT" secondAttribute="bottom" constant="12" id="DJr-9U-cff"/>
+                            <constraint firstItem="gB6-2L-xzb" firstAttribute="top" secondItem="OLd-vr-WUF" secondAttribute="bottom" constant="12" id="JrX-8i-Avl"/>
+                            <constraint firstItem="OLd-vr-WUF" firstAttribute="leading" secondItem="pXK-gx-lbo" secondAttribute="leading" constant="9" id="crv-dj-n2d"/>
+                            <constraint firstItem="pXK-gx-lbo" firstAttribute="trailing" secondItem="OLd-vr-WUF" secondAttribute="trailing" constant="9" id="dof-1U-PPj"/>
+                            <constraint firstItem="pXK-gx-lbo" firstAttribute="trailing" secondItem="yYC-iC-rvT" secondAttribute="trailing" constant="9" id="e2t-8P-XgO"/>
+                            <constraint firstItem="yYC-iC-rvT" firstAttribute="leading" secondItem="pXK-gx-lbo" secondAttribute="leading" constant="9" id="l4V-9S-5gM"/>
+                            <constraint firstItem="pXK-gx-lbo" firstAttribute="trailing" secondItem="gB6-2L-xzb" secondAttribute="trailing" constant="9" id="lN9-Xs-BsC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tVr-3d-kqp"/>
+                    <connections>
+                        <outlet property="txtError" destination="OLd-vr-WUF" id="tFC-zh-ZwC"/>
+                        <outlet property="txtInformation" destination="yYC-iC-rvT" id="bPo-9g-6R1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhn-qC-Bub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4443.5114503816794" y="-1533.0985915492959"/>
+        </scene>
+        <!--Auto Report Values View Controller-->
+        <scene sceneID="9LC-8e-bbx">
+            <objects>
+                <viewController id="eCL-KI-Bu1" customClass="AutoReportValuesViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jOo-KL-Nyd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hxM-3I-puh">
+                                <rect key="frame" x="9" y="468" width="375" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="X8p-PH-DAI"/>
+                                </constraints>
+                                <string key="text">The reportValue method allows you to report your own metrics. These metrics must be part of a custom action or an autogenerated user action. Reported values are displayed in the user action waterfall analysis.
+
+The OneAgent SDK allows you to report int, double, and string values. 
+Check also https://www.dynatrace.com/support/help/shortlink/define-mobile-action-and-session-properties</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zaC-AB-WiH">
+                                <rect key="frame" x="9" y="115" width="375" height="127"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kqc-AU-hQy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="34.333333333333336"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 1234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leE-cR-ZTN">
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aw6-0f-md1">
+                                                <rect key="frame" x="193.66666666666663" y="0.0" width="181.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Report int value"/>
+                                                <connections>
+                                                    <action selector="btnReportInt_Touch:" destination="eCL-KI-Bu1" eventType="touchUpInside" id="FUb-cR-jw2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yD1-X8-efm">
+                                        <rect key="frame" x="0.0" y="46.333333333333343" width="375" height="34.333333333333343"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: Hello there!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jv-5W-k11">
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HM-fL-e5I">
+                                                <rect key="frame" x="193.66666666666663" y="0.0" width="181.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Report string value"/>
+                                                <connections>
+                                                    <action selector="btnReportString_Touch:" destination="eCL-KI-Bu1" eventType="touchUpInside" id="Zgz-ck-dcg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Uz7-UM-LXe">
+                                        <rect key="frame" x="0.0" y="92.666666666666657" width="375" height="34.333333333333343"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 12.34" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iet-F8-mxg">
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUI-eG-EvZ">
+                                                <rect key="frame" x="193.66666666666663" y="0.0" width="181.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Report Double value"/>
+                                                <connections>
+                                                    <action selector="btnReportDouble_Touch:" destination="eCL-KI-Bu1" eventType="touchUpInside" id="vUV-YA-aqv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KhE-SD-MsN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zaC-AB-WiH" firstAttribute="top" secondItem="KhE-SD-MsN" secondAttribute="top" constant="12" id="Inz-VQ-jRg"/>
+                            <constraint firstItem="KhE-SD-MsN" firstAttribute="bottom" secondItem="hxM-3I-puh" secondAttribute="bottom" constant="12" id="W6W-PV-ufk"/>
+                            <constraint firstItem="hxM-3I-puh" firstAttribute="leading" secondItem="KhE-SD-MsN" secondAttribute="leading" constant="9" id="b7j-5N-uyE"/>
+                            <constraint firstItem="zaC-AB-WiH" firstAttribute="leading" secondItem="KhE-SD-MsN" secondAttribute="leading" constant="9" id="cyh-wi-cee"/>
+                            <constraint firstItem="KhE-SD-MsN" firstAttribute="trailing" secondItem="zaC-AB-WiH" secondAttribute="trailing" constant="9" id="cyi-cv-2TX"/>
+                            <constraint firstItem="KhE-SD-MsN" firstAttribute="trailing" secondItem="hxM-3I-puh" secondAttribute="trailing" constant="9" id="uhU-uC-9FI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1dD-1U-imx"/>
+                    <connections>
+                        <outlet property="txtDoubleValue" destination="iet-F8-mxg" id="Ptq-KC-Clb"/>
+                        <outlet property="txtInformation" destination="hxM-3I-puh" id="heb-RV-qTR"/>
+                        <outlet property="txtIntValue" destination="leE-cR-ZTN" id="QJ8-z6-6jR"/>
+                        <outlet property="txtStringValue" destination="7jv-5W-k11" id="RiM-KW-Pvb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fV-8d-ooa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5568.7022900763359" y="-1533.0985915492959"/>
+        </scene>
+        <!--Auto Biz Event View Controller-->
+        <scene sceneID="SaT-90-vDt">
+            <objects>
+                <viewController id="CDl-3h-ctB" customClass="AutoBizEventViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sEY-Iw-NQm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a2n-tu-cHZ">
+                                <rect key="frame" x="9" y="468" width="375" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="YJp-Ws-eIq"/>
+                                </constraints>
+                                <string key="text">With sendBizEvent, you can report business events. These are standalone events, as OneAgent sends them separately from user actions or user sessions.
+
+For more information on business events, see Business Analytics in Dynatrace. https://www.dynatrace.com/support/help/how-to-use-dynatrace/business-analytics</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtS-aQ-T7X">
+                                <rect key="frame" x="9" y="115" width="375" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Send BizEvent"/>
+                                <connections>
+                                    <action selector="btnAutoBizEvent_Touch:" destination="CDl-3h-ctB" eventType="touchUpInside" id="Pxi-yf-R2D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E3f-ne-go0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E3f-ne-go0" firstAttribute="bottom" secondItem="a2n-tu-cHZ" secondAttribute="bottom" constant="12" id="M56-mY-YKx"/>
+                            <constraint firstItem="FtS-aQ-T7X" firstAttribute="leading" secondItem="E3f-ne-go0" secondAttribute="leading" constant="9" id="e7B-9L-RAc"/>
+                            <constraint firstItem="FtS-aQ-T7X" firstAttribute="top" secondItem="E3f-ne-go0" secondAttribute="top" constant="12" id="gN1-pS-7nu"/>
+                            <constraint firstItem="a2n-tu-cHZ" firstAttribute="leading" secondItem="E3f-ne-go0" secondAttribute="leading" constant="9" id="hI9-mm-8Np"/>
+                            <constraint firstItem="E3f-ne-go0" firstAttribute="trailing" secondItem="FtS-aQ-T7X" secondAttribute="trailing" constant="9" id="vNw-34-G7y"/>
+                            <constraint firstItem="E3f-ne-go0" firstAttribute="trailing" secondItem="a2n-tu-cHZ" secondAttribute="trailing" constant="9" id="w0R-13-Nig"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kaK-cV-oUw"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="a2n-tu-cHZ" id="nuW-zM-llx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UY2-CX-LiN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6771.7557251908393" y="-1965.4929577464791"/>
+        </scene>
+        <!--Auto Report Global Error View Controller-->
+        <scene sceneID="dn5-iH-eMV">
+            <objects>
+                <viewController id="YaM-BF-fBi" customClass="AutoReportGlobalErrorViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wYd-DA-Yet">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UdM-Xa-8ul">
+                                <rect key="frame" x="9" y="468" width="375" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="VEk-Lq-xGp"/>
+                                </constraints>
+                                <string key="text">Standalone error (not bound to a specific user action) https://www.dynatrace.com/support/help/shortlink/ios-oneagent-sdk#report-error
+
+With reportError, you can report a specific event as an error event.
+
+There are two options for reporting an error event:
+
+Report it as part of an action (either a custom action or an autogenerated user action)
+Report it as a standalone error, which is generated as a global event that is not tied to a specific action
+Reported errors (both standalone and "attached" to a user action) are displayed on the user session details page and multidimensional User action analysis page. Reported errors that are part of a user action are also displayed in the user action waterfall analysis.
+
+You can report an error with an error code, an exception, or an NSError.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My custom error" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-YV-VFf">
+                                <rect key="frame" x="9" y="115" width="375" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUp-IT-Kq9">
+                                <rect key="frame" x="216" y="161" width="168" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Report global error"/>
+                                <connections>
+                                    <action selector="btnGlobalError_Touch:" destination="YaM-BF-fBi" eventType="touchUpInside" id="hdZ-s6-x4Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="78q-xl-bM2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="78q-xl-bM2" firstAttribute="trailing" secondItem="UdM-Xa-8ul" secondAttribute="trailing" constant="9" id="9mE-Gy-j6V"/>
+                            <constraint firstItem="LWj-YV-VFf" firstAttribute="top" secondItem="78q-xl-bM2" secondAttribute="top" constant="12" id="ALr-0W-bjT"/>
+                            <constraint firstItem="LWj-YV-VFf" firstAttribute="leading" secondItem="78q-xl-bM2" secondAttribute="leading" constant="9" id="C7U-Oj-WYk"/>
+                            <constraint firstItem="UdM-Xa-8ul" firstAttribute="leading" secondItem="78q-xl-bM2" secondAttribute="leading" constant="9" id="VNE-PF-qWN"/>
+                            <constraint firstItem="BUp-IT-Kq9" firstAttribute="top" secondItem="LWj-YV-VFf" secondAttribute="bottom" constant="12" id="aXn-PS-Lfo"/>
+                            <constraint firstItem="78q-xl-bM2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BUp-IT-Kq9" secondAttribute="trailing" id="bAF-ZA-sv9"/>
+                            <constraint firstItem="BUp-IT-Kq9" firstAttribute="leading" secondItem="78q-xl-bM2" secondAttribute="leading" constant="216" id="oeE-rP-dyx"/>
+                            <constraint firstItem="78q-xl-bM2" firstAttribute="bottom" secondItem="UdM-Xa-8ul" secondAttribute="bottom" constant="12" id="vLS-og-8DJ"/>
+                            <constraint firstItem="78q-xl-bM2" firstAttribute="trailing" secondItem="LWj-YV-VFf" secondAttribute="trailing" constant="9" id="xQ5-W3-88d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cy8-bJ-Ozc"/>
+                    <connections>
+                        <outlet property="txtGlobalError" destination="LWj-YV-VFf" id="HZ1-5T-uWw"/>
+                        <outlet property="txtInformation" destination="UdM-Xa-8ul" id="Ris-tw-kgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPS-iX-GZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5568.7022900763359" y="-2525.3521126760565"/>
+        </scene>
+        <!--Advanced Configuration View Controller-->
+        <scene sceneID="mVz-yx-6lX">
+            <objects>
+                <viewController id="ZPf-5X-aIo" customClass="AdvancedConfigurationViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W90-59-e0b">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FKI-fF-kIL">
+                                <rect key="frame" x="16" y="480" width="361" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="Mx1-3V-lkI"/>
+                                </constraints>
+                                <string key="text">https://www.dynatrace.com/support/help/shortlink/ios-advanced-settings
+
+If the HTTP requests of OneAgent don't fulfill the security requirements of your server infrastructure, you can modify the HTTP headers of OneAgent with Dynatrace.setBeaconHeaders([String : String]?). This feature allows you to add an Authorization header to the HTTP requests and immediately reconnect to the Cluster ActiveGate when the token has expired. To delete the old headers, call Dynatrace.setBeaconHeaders(nil).</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="er9-ui-8PO">
+                                <rect key="frame" x="12" y="115" width="369" height="143"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BH-YE-kex">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="39.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Add custom beacon header"/>
+                                        <connections>
+                                            <action selector="btnCustomHeader_Touch:" destination="ZPf-5X-aIo" eventType="touchUpInside" id="nyK-hU-hC1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ED-WH-uhT">
+                                        <rect key="frame" x="0.0" y="51.666666666666657" width="369" height="39.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Remove custom beacon header"/>
+                                        <connections>
+                                            <action selector="btnRemoveCustomHeader_Touch:" destination="ZPf-5X-aIo" eventType="touchUpInside" id="a1a-Cs-BC2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7m2-V7-uxC">
+                                        <rect key="frame" x="0.0" y="103.33333333333334" width="369" height="39.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="View custom headers"/>
+                                        <connections>
+                                            <action selector="btnViewCustomHeader_Touch:" destination="ZPf-5X-aIo" eventType="touchUpInside" id="aUj-r0-qrs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="d8F-Vg-vjY"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pzK-SY-QWL">
+                                <rect key="frame" x="12" y="270" width="369" height="198"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J0A-nM-QBk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FKI-fF-kIL" firstAttribute="leading" secondItem="W90-59-e0b" secondAttribute="leadingMargin" id="7fe-77-DJk"/>
+                            <constraint firstItem="pzK-SY-QWL" firstAttribute="top" secondItem="er9-ui-8PO" secondAttribute="bottom" constant="12" id="JSK-p2-f4I"/>
+                            <constraint firstItem="pzK-SY-QWL" firstAttribute="leading" secondItem="J0A-nM-QBk" secondAttribute="leading" constant="12" id="KT6-LR-9tf"/>
+                            <constraint firstItem="er9-ui-8PO" firstAttribute="top" secondItem="J0A-nM-QBk" secondAttribute="top" constant="12" id="Ptr-Lx-smd"/>
+                            <constraint firstItem="J0A-nM-QBk" firstAttribute="trailing" secondItem="pzK-SY-QWL" secondAttribute="trailing" constant="12" id="ah0-wt-941"/>
+                            <constraint firstItem="J0A-nM-QBk" firstAttribute="trailing" secondItem="er9-ui-8PO" secondAttribute="trailing" constant="12" id="fn9-3j-ph2"/>
+                            <constraint firstItem="FKI-fF-kIL" firstAttribute="centerX" secondItem="pzK-SY-QWL" secondAttribute="centerX" id="pE0-r2-D20"/>
+                            <constraint firstItem="er9-ui-8PO" firstAttribute="leading" secondItem="J0A-nM-QBk" secondAttribute="leading" constant="12" id="pEH-Dh-Ree"/>
+                            <constraint firstItem="FKI-fF-kIL" firstAttribute="top" secondItem="pzK-SY-QWL" secondAttribute="bottom" constant="12" id="rCE-tj-kk2"/>
+                            <constraint firstItem="FKI-fF-kIL" firstAttribute="bottom" secondItem="J0A-nM-QBk" secondAttribute="bottom" id="vSg-t8-OXg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="egA-CM-ccF"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="FKI-fF-kIL" id="UcO-Mf-KIE"/>
+                        <outlet property="txtOutput" destination="pzK-SY-QWL" id="Y22-mu-kHm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1B-2z-hMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1874.0458015267175" y="841.54929577464793"/>
+        </scene>
+        <!--Manual Report Errors View Controller-->
+        <scene sceneID="bsA-se-Zho">
+            <objects>
+                <viewController id="4R2-Sx-6ZZ" customClass="ManualReportErrorsViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KIo-rl-ugO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R0y-J8-tMP">
+                                <rect key="frame" x="12" y="468" width="369" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="bFN-cV-D5M"/>
+                                </constraints>
+                                <string key="text">Error bound to a specific user action
+
+With reportError, you can report a specific event as an error event.
+
+There are two options for reporting an error event:
+
+Report it as part of an action (either a custom action or an autogenerated user action)
+Report it as a standalone error, which is generated as a global event that is not tied to a specific action
+Reported errors (both standalone and "attached" to a user action) are displayed on the user session details page and multidimensional User action analysis page. Reported errors that are part of a user action are also displayed in the user action waterfall analysis.
+
+You can report an error with an error code, an exception, or an NSError.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0x-zz-DdC">
+                                <rect key="frame" x="175" y="161" width="206" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Report user action Error"/>
+                                <connections>
+                                    <action selector="btnGlobalError_Touch:" destination="4R2-Sx-6ZZ" eventType="touchUpInside" id="fCp-Ic-DMx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My custom error" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJb-1b-dMO">
+                                <rect key="frame" x="12" y="115" width="369" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gsa-ku-JZF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gsa-ku-JZF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="o0x-zz-DdC" secondAttribute="trailing" id="1cE-mb-FYw"/>
+                            <constraint firstItem="o0x-zz-DdC" firstAttribute="top" secondItem="oJb-1b-dMO" secondAttribute="bottom" constant="12" id="397-vS-fZb"/>
+                            <constraint firstItem="Gsa-ku-JZF" firstAttribute="trailing" secondItem="oJb-1b-dMO" secondAttribute="trailing" constant="12" id="7hY-8a-VKx"/>
+                            <constraint firstItem="Gsa-ku-JZF" firstAttribute="trailing" secondItem="R0y-J8-tMP" secondAttribute="trailing" constant="12" id="EU2-go-TFg"/>
+                            <constraint firstItem="o0x-zz-DdC" firstAttribute="leading" secondItem="Gsa-ku-JZF" secondAttribute="leading" constant="175" id="Rb4-SA-YeY"/>
+                            <constraint firstItem="oJb-1b-dMO" firstAttribute="top" secondItem="Gsa-ku-JZF" secondAttribute="top" constant="12" id="TV8-eg-HQp"/>
+                            <constraint firstItem="Gsa-ku-JZF" firstAttribute="bottom" secondItem="R0y-J8-tMP" secondAttribute="bottom" constant="12" id="cTW-PR-yJl"/>
+                            <constraint firstItem="oJb-1b-dMO" firstAttribute="leading" secondItem="Gsa-ku-JZF" secondAttribute="leading" constant="12" id="pJr-vZ-fQ2"/>
+                            <constraint firstItem="R0y-J8-tMP" firstAttribute="leading" secondItem="Gsa-ku-JZF" secondAttribute="leading" constant="12" id="xnM-5K-nYn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w37-Kd-hNt"/>
+                    <connections>
+                        <outlet property="txtError" destination="oJb-1b-dMO" id="oQL-Or-3fi"/>
+                        <outlet property="txtInformation" destination="R0y-J8-tMP" id="H6k-ju-iOT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kXt-dk-9oD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2241.9847328244273" y="1917.605633802817"/>
+        </scene>
+        <!--Manual Report Global Error View Controller-->
+        <scene sceneID="VUM-xQ-gje">
+            <objects>
+                <viewController id="1gJ-8d-OmQ" customClass="ManualReportGlobalErrorViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LjA-CG-t6S">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2wJ-RC-JIN">
+                                <rect key="frame" x="12" y="468" width="369" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="CtF-ND-Qrh"/>
+                                </constraints>
+                                <string key="text">Standalone error (not bound to a specific user action)
+
+With reportError, you can report a specific event as an error event.
+
+There are two options for reporting an error event:
+
+Report it as part of an action (either a custom action or an autogenerated user action)
+Report it as a standalone error, which is generated as a global event that is not tied to a specific action
+Reported errors (both standalone and "attached" to a user action) are displayed on the user session details page and multidimensional User action analysis page. Reported errors that are part of a user action are also displayed in the user action waterfall analysis.
+
+You can report an error with an error code, an exception, or an NSError.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My custom error" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j4i-Xp-64z">
+                                <rect key="frame" x="12" y="115" width="369" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1H-Qb-FcL">
+                                <rect key="frame" x="213" y="161" width="168" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Report global error"/>
+                                <connections>
+                                    <action selector="btnGlobalError_Touch:" destination="1gJ-8d-OmQ" eventType="touchUpInside" id="AQG-bu-Dv3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pc4-PB-kd8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M1H-Qb-FcL" firstAttribute="top" secondItem="j4i-Xp-64z" secondAttribute="bottom" constant="12" id="3xW-yS-j4k"/>
+                            <constraint firstItem="M1H-Qb-FcL" firstAttribute="leading" secondItem="pc4-PB-kd8" secondAttribute="leading" constant="213" id="5Sg-Ml-dab"/>
+                            <constraint firstItem="pc4-PB-kd8" firstAttribute="bottom" secondItem="2wJ-RC-JIN" secondAttribute="bottom" constant="12" id="DaF-JD-2fG"/>
+                            <constraint firstItem="j4i-Xp-64z" firstAttribute="top" secondItem="pc4-PB-kd8" secondAttribute="top" constant="12" id="FgR-Ft-G8s"/>
+                            <constraint firstItem="pc4-PB-kd8" firstAttribute="trailing" secondItem="2wJ-RC-JIN" secondAttribute="trailing" constant="12" id="HU3-an-OLm"/>
+                            <constraint firstItem="pc4-PB-kd8" firstAttribute="trailing" secondItem="j4i-Xp-64z" secondAttribute="trailing" constant="12" id="ROB-iF-w4a"/>
+                            <constraint firstItem="2wJ-RC-JIN" firstAttribute="leading" secondItem="pc4-PB-kd8" secondAttribute="leading" constant="12" id="RWo-fZ-ikY"/>
+                            <constraint firstItem="pc4-PB-kd8" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="M1H-Qb-FcL" secondAttribute="trailing" id="SzM-PX-7fm"/>
+                            <constraint firstItem="j4i-Xp-64z" firstAttribute="leading" secondItem="pc4-PB-kd8" secondAttribute="leading" constant="12" id="mPk-KV-CRv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TDQ-HD-ArJ"/>
+                    <connections>
+                        <outlet property="txtGlobalError" destination="j4i-Xp-64z" id="N7Y-oe-19p"/>
+                        <outlet property="txtInformation" destination="2wJ-RC-JIN" id="ZBw-HS-0MB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCV-fg-OBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3310.6870229007632" y="1917.605633802817"/>
+        </scene>
+        <!--Manual Other Actions View Controller-->
+        <scene sceneID="CGH-Ih-6q8">
+            <objects>
+                <viewController id="F4X-aF-Yuj" customClass="ManualOtherActionsViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s5z-qG-vuM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-3t-X6y">
+                                <rect key="frame" x="12" y="115" width="369" height="31"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mb1-W8-upn">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmantChange:" destination="F4X-aF-Yuj" eventType="valueChanged" id="EHc-8J-I60"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLV-Bv-IGA">
+                                        <rect key="frame" x="86" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchChanged:" destination="F4X-aF-Yuj" eventType="valueChanged" id="euf-Zv-y5c"/>
+                                        </connections>
+                                    </switch>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Shy-Yn-ajg">
+                                        <rect key="frame" x="161" y="0.0" width="210" height="32"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="F4X-aF-Yuj" eventType="valueChanged" id="Z8T-f0-b7b"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <colorWell contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eud-oP-LFZ">
+                                <rect key="frame" x="60" y="170" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="QrL-7h-7mX"/>
+                                    <constraint firstAttribute="width" constant="28" id="mOM-GU-m4C"/>
+                                </constraints>
+                            </colorWell>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fQC-nI-Q5g">
+                                <rect key="frame" x="12" y="468" width="369" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="Tpn-RD-tRK"/>
+                                </constraints>
+                                <string key="text">The code snippet below shows how to start and close a custom action. Note that OneAgent discards all action-related monitoring data when the custom action isn't closed. Timing is measured automatically.
+
+The maximum duration of a mobile custom action is 9 minutes.
+
+If a custom action takes longer than 9 minutes and is not closed, such an action is discarded and not reported to Dynatrace.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpJ-EH-9Wz">
+                                <rect key="frame" x="12" y="210" width="369" height="246"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swip Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfm-HU-IYM">
+                                        <rect key="frame" x="166" y="94" width="74.333333333333314" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstItem="Gfm-HU-IYM" firstAttribute="leading" secondItem="JpJ-EH-9Wz" secondAttribute="leading" constant="166" id="MMd-kx-tTM"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gfm-HU-IYM" secondAttribute="trailing" constant="20" symbolic="YES" id="rLv-Zm-XTr"/>
+                                    <constraint firstItem="Gfm-HU-IYM" firstAttribute="top" secondItem="JpJ-EH-9Wz" secondAttribute="top" constant="94" id="wGP-As-X3j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pKZ-uD-KNX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fQC-nI-Q5g" firstAttribute="leading" secondItem="pKZ-uD-KNX" secondAttribute="leading" constant="12" id="1lz-TC-1nZ"/>
+                            <constraint firstItem="JpJ-EH-9Wz" firstAttribute="top" secondItem="eud-oP-LFZ" secondAttribute="bottom" constant="12" id="3iD-GI-Bqi"/>
+                            <constraint firstItem="eud-oP-LFZ" firstAttribute="leading" secondItem="pKZ-uD-KNX" secondAttribute="leading" constant="60" id="D7C-18-crR"/>
+                            <constraint firstItem="fQC-nI-Q5g" firstAttribute="top" secondItem="JpJ-EH-9Wz" secondAttribute="bottom" constant="12" id="Ep6-rg-gB0"/>
+                            <constraint firstItem="pKZ-uD-KNX" firstAttribute="trailing" secondItem="ZCg-3t-X6y" secondAttribute="trailing" constant="12" id="KWJ-vk-b4X"/>
+                            <constraint firstItem="pKZ-uD-KNX" firstAttribute="trailing" secondItem="fQC-nI-Q5g" secondAttribute="trailing" constant="12" id="PP5-ij-Vjt"/>
+                            <constraint firstItem="pKZ-uD-KNX" firstAttribute="trailing" secondItem="JpJ-EH-9Wz" secondAttribute="trailing" constant="12" id="hOV-Vr-tYi"/>
+                            <constraint firstItem="ZCg-3t-X6y" firstAttribute="leading" secondItem="pKZ-uD-KNX" secondAttribute="leading" constant="12" id="kzC-p0-Y6J"/>
+                            <constraint firstItem="eud-oP-LFZ" firstAttribute="top" secondItem="ZCg-3t-X6y" secondAttribute="bottom" constant="24" id="rbg-bQ-llc"/>
+                            <constraint firstItem="ZCg-3t-X6y" firstAttribute="top" secondItem="pKZ-uD-KNX" secondAttribute="top" constant="12" id="rh0-fc-VCT"/>
+                            <constraint firstItem="JpJ-EH-9Wz" firstAttribute="leading" secondItem="pKZ-uD-KNX" secondAttribute="leading" constant="12" id="vX4-Lc-9WM"/>
+                            <constraint firstItem="pKZ-uD-KNX" firstAttribute="bottom" secondItem="fQC-nI-Q5g" secondAttribute="bottom" constant="12" id="x0A-SS-UlF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lnw-mU-2U1"/>
+                    <connections>
+                        <outlet property="colorWell" destination="eud-oP-LFZ" id="L1B-HF-hve"/>
+                        <outlet property="swipableView" destination="JpJ-EH-9Wz" id="TVT-0a-pXd"/>
+                        <outlet property="txtInformation" destination="fQC-nI-Q5g" id="GRb-3q-gt5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYo-Mx-vTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3310.6870229007632" y="886.61971830985919"/>
+        </scene>
+        <!--Manual Identify User View Controller-->
+        <scene sceneID="kzU-Aq-N2r">
+            <objects>
+                <viewController id="HaJ-km-Vdk" customClass="ManualIdentifyUserViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HZn-yV-dfK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aII-gi-uTu">
+                                <rect key="frame" x="12" y="115" width="369" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lI8-w3-nxF">
+                                <rect key="frame" x="12" y="492" width="369" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="jJJ-7r-pQJ"/>
+                                </constraints>
+                                <string key="text">You can tag each user of your mobile apps with a unique user name. This enables you to search and filter specific user sessions and analyze individual user behavior over time.
+
+The following steps explain how to manually tag an individual user via the Dynatrace API. You can tag users when they log in or when an already logged in session is used or restored upon app relaunch, as the tag isn't persisted over app restarts.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLw-4M-gxJ">
+                                <rect key="frame" x="262" y="161" width="119" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Identify user"/>
+                                <connections>
+                                    <action selector="btnIdentifyUser_Touch:" destination="HaJ-km-Vdk" eventType="touchUpInside" id="H7Z-Qh-KUD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ynP-Es-g9S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ManualIdentifyUser"/>
+                        <constraints>
+                            <constraint firstItem="lI8-w3-nxF" firstAttribute="leading" secondItem="ynP-Es-g9S" secondAttribute="leading" constant="12" id="2aB-rK-TmF"/>
+                            <constraint firstItem="ynP-Es-g9S" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GLw-4M-gxJ" secondAttribute="trailing" id="CIy-Ek-GNI"/>
+                            <constraint firstItem="aII-gi-uTu" firstAttribute="top" secondItem="ynP-Es-g9S" secondAttribute="top" constant="12" id="ENr-uI-vjU"/>
+                            <constraint firstItem="ynP-Es-g9S" firstAttribute="trailing" secondItem="aII-gi-uTu" secondAttribute="trailing" constant="12" id="En7-T0-exq"/>
+                            <constraint firstItem="GLw-4M-gxJ" firstAttribute="leading" secondItem="ynP-Es-g9S" secondAttribute="leading" constant="262" id="LeX-nY-8Uw"/>
+                            <constraint firstItem="GLw-4M-gxJ" firstAttribute="top" secondItem="aII-gi-uTu" secondAttribute="bottom" constant="12" id="UGy-FS-d6h"/>
+                            <constraint firstItem="ynP-Es-g9S" firstAttribute="trailing" secondItem="lI8-w3-nxF" secondAttribute="trailing" constant="12" id="ZSL-fP-Yo7"/>
+                            <constraint firstItem="aII-gi-uTu" firstAttribute="leading" secondItem="ynP-Es-g9S" secondAttribute="leading" constant="12" id="nat-ig-sEe"/>
+                            <constraint firstItem="lI8-w3-nxF" firstAttribute="bottom" secondItem="ynP-Es-g9S" secondAttribute="bottom" constant="12" id="rtM-kk-x7X"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4ue-E8-q1y"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="lI8-w3-nxF" id="r2V-bX-yqQ"/>
+                        <outlet property="txtUserName" destination="aII-gi-uTu" id="EQ2-8w-5GW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LmQ-6i-0AN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4508" y="1918"/>
+        </scene>
+        <!--Manual Report Values View Controller-->
+        <scene sceneID="1cy-tJ-puN">
+            <objects>
+                <viewController id="tay-oc-pwv" customClass="ManualReportValuesViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gs9-Ok-953">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BGt-nI-Pcl">
+                                <rect key="frame" x="12" y="468" width="369" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="SQ8-VG-TyS"/>
+                                </constraints>
+                                <string key="text">The reportValue method allows you to report your own metrics. These metrics must be part of a custom action or an autogenerated user action. Reported values are displayed in the user action waterfall analysis.
+
+The OneAgent SDK allows you to report int, double, and string values. 
+Check also https://www.dynatrace.com/support/help/shortlink/define-mobile-action-and-session-properties</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PhM-70-RM2">
+                                <rect key="frame" x="12" y="115" width="369" height="127"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Duu-3J-ucz">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="34.333333333333336"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 1234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-2w-Y11">
+                                                <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9a8-7P-utf">
+                                                <rect key="frame" x="190.66666666666663" y="0.0" width="178.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Report int value"/>
+                                                <connections>
+                                                    <action selector="btnReportInt_Touch:" destination="eCL-KI-Bu1" eventType="touchUpInside" id="Yu5-PQ-2c1"/>
+                                                    <action selector="btnReportInt_Touch:" destination="tay-oc-pwv" eventType="touchUpInside" id="b0d-lU-wcd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bM5-Nq-wRO">
+                                        <rect key="frame" x="0.0" y="46.333333333333343" width="369" height="34.333333333333343"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: Hello there!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6B-W9-o3c">
+                                                <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bim-Oa-Kbs">
+                                                <rect key="frame" x="190.66666666666663" y="0.0" width="178.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Report string value"/>
+                                                <connections>
+                                                    <action selector="btnReportString_Touch:" destination="tay-oc-pwv" eventType="touchUpInside" id="8pY-2D-Iro"/>
+                                                    <action selector="btnReportString_Touch:" destination="eCL-KI-Bu1" eventType="touchUpInside" id="DWV-ud-CGE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xAY-M9-0WS">
+                                        <rect key="frame" x="0.0" y="92.666666666666657" width="369" height="34.333333333333343"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 12.34" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eH2-i7-cbS">
+                                                <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vv-hp-Mse">
+                                                <rect key="frame" x="190.66666666666663" y="0.0" width="178.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Report Double value"/>
+                                                <connections>
+                                                    <action selector="btnReportDouble_Touch:" destination="eCL-KI-Bu1" eventType="touchUpInside" id="ADv-Dp-DhG"/>
+                                                    <action selector="btnReportDouble_Touch:" destination="tay-oc-pwv" eventType="touchUpInside" id="gIv-0V-uiJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g5X-ui-ZHY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PhM-70-RM2" firstAttribute="leading" secondItem="g5X-ui-ZHY" secondAttribute="leading" constant="12" id="EVv-Mu-d8n"/>
+                            <constraint firstItem="g5X-ui-ZHY" firstAttribute="bottom" secondItem="BGt-nI-Pcl" secondAttribute="bottom" constant="12" id="M1p-aY-Zgv"/>
+                            <constraint firstItem="g5X-ui-ZHY" firstAttribute="trailing" secondItem="PhM-70-RM2" secondAttribute="trailing" constant="12" id="fO3-Jc-hOQ"/>
+                            <constraint firstItem="g5X-ui-ZHY" firstAttribute="trailing" secondItem="BGt-nI-Pcl" secondAttribute="trailing" constant="12" id="h5x-xt-UG7"/>
+                            <constraint firstItem="PhM-70-RM2" firstAttribute="top" secondItem="g5X-ui-ZHY" secondAttribute="top" constant="12" id="hJ5-Du-cpi"/>
+                            <constraint firstItem="BGt-nI-Pcl" firstAttribute="leading" secondItem="g5X-ui-ZHY" secondAttribute="leading" constant="12" id="kir-ib-jTg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jGU-j4-IZM"/>
+                    <connections>
+                        <outlet property="txtDoubleValue" destination="eH2-i7-cbS" id="UCg-3P-O2C"/>
+                        <outlet property="txtInformation" destination="BGt-nI-Pcl" id="VaL-Uf-cQG"/>
+                        <outlet property="txtIntValue" destination="Pyf-2w-Y11" id="xXI-bb-xWa"/>
+                        <outlet property="txtStringValue" destination="P6B-W9-o3c" id="PzU-4a-fX1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hls-w4-jao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5527" y="1912"/>
+        </scene>
+        <!--Manual Biz Event View Controller-->
+        <scene sceneID="wVj-7H-hFx">
+            <objects>
+                <viewController id="WXg-kP-vic" customClass="ManualBizEventViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uu1-O0-vVS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bsK-Wx-heP">
+                                <rect key="frame" x="12" y="502" width="369" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="9u7-HT-EfF"/>
+                                </constraints>
+                                <string key="text">With sendBizEvent, you can report business events. These are standalone events, as OneAgent sends them separately from user actions or user sessions.
+
+For more information on business events, see Business Analytics in Dynatrace. https://www.dynatrace.com/support/help/how-to-use-dynatrace/business-analytics</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-DP-EO9">
+                                <rect key="frame" x="12" y="115" width="369" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Send BizEvent"/>
+                                <connections>
+                                    <action selector="btnAutoBizEvent_Touch:" destination="WXg-kP-vic" eventType="touchUpInside" id="oBJ-Zo-mbD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uil-Qn-C3B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bsK-Wx-heP" secondAttribute="bottom" constant="12" id="3P7-Qg-hnb"/>
+                            <constraint firstItem="NCK-DP-EO9" firstAttribute="top" secondItem="uil-Qn-C3B" secondAttribute="top" constant="12" id="8kH-bn-f5i"/>
+                            <constraint firstItem="bsK-Wx-heP" firstAttribute="leading" secondItem="uil-Qn-C3B" secondAttribute="leading" constant="12" id="AT1-QH-ri5"/>
+                            <constraint firstItem="uil-Qn-C3B" firstAttribute="trailing" secondItem="NCK-DP-EO9" secondAttribute="trailing" constant="12" id="Beq-0g-OHk"/>
+                            <constraint firstItem="NCK-DP-EO9" firstAttribute="leading" secondItem="uil-Qn-C3B" secondAttribute="leading" constant="12" id="Fkc-Cr-Jf6"/>
+                            <constraint firstItem="uil-Qn-C3B" firstAttribute="trailing" secondItem="bsK-Wx-heP" secondAttribute="trailing" constant="12" id="Gbo-fA-wPH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cQm-kG-z7P"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="bsK-Wx-heP" id="cWh-vj-snA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uif-Lk-lkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6605" y="1396"/>
+        </scene>
+        <!--Manual Web Requests View Controller-->
+        <scene sceneID="Xfm-nj-COi">
+            <objects>
+                <viewController id="qwY-3F-bvH" customClass="ManualWebRequestsViewController" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ype-ix-pUl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://myapi/getsomething/123" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eM3-O5-YVw">
+                                <rect key="frame" x="12" y="115" width="369" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="url"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqR-i8-G6M">
+                                <rect key="frame" x="12" y="161" width="369" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Auto instrumented web request"/>
+                                <connections>
+                                    <action selector="btnAutoInstrumentWebRequest_Touch:" destination="qwY-3F-bvH" eventType="touchUpInside" id="qZP-nF-5dX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lII-UG-0wp">
+                                <rect key="frame" x="12" y="208" width="369" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Manual instrumented web request"/>
+                                <connections>
+                                    <action selector="btnManualInstrumentWebRequest_Touch:" destination="qwY-3F-bvH" eventType="touchUpInside" id="8nJ-WX-YUw"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ay8-Ag-h8G">
+                                <rect key="frame" x="12" y="468" width="369" height="338"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="EcY-Wy-HVG"/>
+                                </constraints>
+                                <string key="text">To track web requests, OneAgent adds the x-dynatrace HTTP header with a unique value to each request. This is required to correlate the server-side monitoring data to the corresponding mobile web request. Additionally, the timing values from the mobile side are measured.
+
+OneAgent for iOS automatically times web requests made using NSURLRequest, NSURLConnection, NSURLSession, NSURLProtocol, NSString, WKWebView, or NSData. However, you have to manually instrument requests in the following cases:
+
+When the automatic instrumentation of web requests is disabled
+When the requests of a third-party framework aren't instrumented
+When you need to report non-HTTP(S) requests</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3sm-hU-d8w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lII-UG-0wp" firstAttribute="top" secondItem="JqR-i8-G6M" secondAttribute="bottom" constant="12" id="2ao-RX-QHD"/>
+                            <constraint firstItem="3sm-hU-d8w" firstAttribute="bottom" secondItem="Ay8-Ag-h8G" secondAttribute="bottom" constant="12" id="JDT-Yi-yQP"/>
+                            <constraint firstItem="eM3-O5-YVw" firstAttribute="top" secondItem="3sm-hU-d8w" secondAttribute="top" constant="12" id="NrP-qT-U4W"/>
+                            <constraint firstItem="3sm-hU-d8w" firstAttribute="trailing" secondItem="eM3-O5-YVw" secondAttribute="trailing" constant="12" id="OW5-Wd-6cd"/>
+                            <constraint firstItem="JqR-i8-G6M" firstAttribute="leading" secondItem="3sm-hU-d8w" secondAttribute="leading" constant="12" id="Ujp-JA-McP"/>
+                            <constraint firstItem="lII-UG-0wp" firstAttribute="leading" secondItem="3sm-hU-d8w" secondAttribute="leading" constant="12" id="Zx1-vR-3El"/>
+                            <constraint firstItem="3sm-hU-d8w" firstAttribute="trailing" secondItem="lII-UG-0wp" secondAttribute="trailing" constant="12" id="aep-AH-t3A"/>
+                            <constraint firstItem="JqR-i8-G6M" firstAttribute="top" secondItem="eM3-O5-YVw" secondAttribute="bottom" constant="12" id="jrm-pw-yja"/>
+                            <constraint firstItem="Ay8-Ag-h8G" firstAttribute="leading" secondItem="3sm-hU-d8w" secondAttribute="leading" constant="12" id="l3Q-MI-wZy"/>
+                            <constraint firstItem="eM3-O5-YVw" firstAttribute="leading" secondItem="3sm-hU-d8w" secondAttribute="leading" constant="12" id="qwT-at-ivg"/>
+                            <constraint firstItem="3sm-hU-d8w" firstAttribute="trailing" secondItem="JqR-i8-G6M" secondAttribute="trailing" constant="12" id="tdY-K4-OBo"/>
+                            <constraint firstItem="3sm-hU-d8w" firstAttribute="trailing" secondItem="Ay8-Ag-h8G" secondAttribute="trailing" constant="12" id="uz3-ac-TuN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LNA-G7-jVi"/>
+                    <connections>
+                        <outlet property="txtInformation" destination="Ay8-Ag-h8G" id="sqS-Em-CoJ"/>
+                        <outlet property="txtUrlRequest" destination="eM3-O5-YVw" id="bDT-q8-wEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="833-in-6f2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5569" y="887"/>
+        </scene>
+        <!--SwiftUI IntroVHC-->
+        <scene sceneID="Agb-1q-bCU">
+            <objects>
+                <hostingController id="43v-fu-ofT" customClass="SwiftUIIntroVHC" customModule="native_swift_ios_sample_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yL0-Da-Fvh"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcs-9S-pBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2581" y="2087"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
