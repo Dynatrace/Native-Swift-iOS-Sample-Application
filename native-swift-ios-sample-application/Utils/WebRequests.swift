@@ -92,6 +92,7 @@ class WebRequests{
             webrequestTiming?.stop((response as! HTTPURLResponse).statusCode.description) //stop webrequest when request finished
             
         }
+          webrequestTiming?.start()
         task.resume()
     }
 }
