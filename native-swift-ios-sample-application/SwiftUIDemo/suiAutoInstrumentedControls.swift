@@ -52,13 +52,6 @@ struct suiAutoInstrumentedControls: View {
                         Text("Some buttons")
                         
                     }
-                    Button("Modify Action", action: {
-                        Dynatrace.modifyUserAction( { (action) -> () in
-                                let oldName = action?.getName()
-                            action?.setName("This is a renamed auto user action (was '\(String(describing: oldName))')")
-                            
-                            })
-                    })
                     Button("Mask Action", action: {
                         
                         self.showAlert = true
