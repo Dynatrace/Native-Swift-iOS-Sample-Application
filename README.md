@@ -69,8 +69,8 @@ ___
 Pre-requisites
 --------------------------------------------------
 
-  - **MacOS **
-    - xCode 
+  - **macOS **
+    - Xcode 
  
   - **Dynatrace Tenant with a Mobile Application created in the UI**
  
